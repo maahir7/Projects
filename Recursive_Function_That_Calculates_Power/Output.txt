@@ -1,0 +1,8 @@
+Enter base: 3
+Enter exponent: 0
+3 raised to 0 = 1.000000
+Enter base: 3
+Enter exponent: 2
+3 raised to 2 = 9.000000
+Enter base: 3
+Enter exponent: -2
