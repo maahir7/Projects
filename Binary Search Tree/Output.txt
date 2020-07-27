@@ -1,0 +1,349 @@
+ert547@fox01.cs.utsa.edu's password:
+     +--------------------------------------------------------------------+
+     ¦                        • MobaXterm 20.2 •                          ¦
+     ¦            (SSH client, X-server and networking tools)             ¦
+     ¦                                                                    ¦
+     ¦ ? SSH session to ert547@fox01.cs.utsa.edu                          ¦
+     ¦   • SSH compression : ?                                            ¦
+     ¦   • SSH-browser     : ?                                            ¦
+     ¦   • X11-forwarding  : ?  (remote display is forwarded through SSH) ¦
+     ¦   • DISPLAY         : ?  (automatically set on remote server)      ¦
+     ¦                                                                    ¦
+     ¦ ? For more info, ctrl+click on help or visit our website           ¦
+     +--------------------------------------------------------------------+
+
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 4.4.0-133-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat Jul 25 23:21:56 CDT 2020
+
+  System load:  0.25               Processes:           270
+  Usage of /:   76.3% of 15.52GB   Users logged in:     7
+  Memory usage: 2%                 IP address for eth0: 129.115.27.201
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+170 packages can be updated.
+145 updates are security updates.
+
+New release '16.04.6 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Your Hardware Enablement Stack (HWE) is supported until April 2019.
+Last login: Sat Jul 25 23:21:56 2020 from cpe-66-25-165-84.satx.res.rr.com
+ert547@fox01:~$ cd working
+ert547@fox01:~/working$ ls
+BST.c  BST.h  java  MaahirKalbanLAB4.c
+ert547@fox01:~/working$ gcc MaahirKalbanLAB4.c BST.c BST.h -o bst -lm
+ert547@fox01:~/working$ ./bst
+Construct an empty BST
+
+
+BST is empty!
+
+The height is = -1
+
+Number of nodes is = 0
+
+Number of leaves is = 0
+
+
+Now insert a bunch of integers into the BST
+
+Try items not in the BST and some that are in it:
+
+Items to insert (-999 to stop): 60
+
+The height is = 0
+
+Number of nodes is = 1
+
+Number of leaves is = 1
+
+Items to insert (-999 to stop): 20
+
+The height is = 0
+
+Number of nodes is = 1
+
+Number of leaves is = 1
+
+Items to insert (-999 to stop): 70
+
+The height is = 1
+
+Number of nodes is = 2
+
+Number of leaves is = 1
+
+Items to insert (-999 to stop): 10
+
+The height is = 1
+
+Number of nodes is = 3
+
+Number of leaves is = 2
+
+Items to insert (-999 to stop): 40
+
+The height is = 2
+
+Number of nodes is = 4
+
+Number of leaves is = 2
+
+Items to insert (-999 to stop): 50
+
+The height is = 2
+
+Number of nodes is = 5
+
+Number of leaves is = 3
+
+Items to insert (-999 to stop): 30
+
+The height is = 3
+
+Number of nodes is = 6
+
+Number of leaves is = 3
+
+Items to insert (-999 to stop): 30
+
+The number has existed!
+
+Items to insert (-999 to stop): -999
+
+The height is = 3
+
+Number of nodes is = 7
+
+Number of leaves is = 4
+
+
+     70
+
+60
+
+               50
+
+          40
+
+               30
+
+     20
+
+          10
+
+BST is not empty
+
+Inorder Traversal of BST:
+10 20 30 40 50 60 70
+
+Preorder Traversal of BST:
+60 20 10 40 30 50 70
+
+Postorder Traversal of BST:
+10 30 50 40 20 70 60
+
+Now testing the contains() operation.
+
+Try both items in the BST and some not in it:
+
+Item to Find (-999 to stop): 30
+
+Found
+
+Item to Find (-999 to stop): 45
+
+NOT Found
+
+Item to Find (-999 to stop): -999
+
+NOT Found
+
+
+Now testing the remove() operation
+
+Try both items in the BST and some not in it:
+
+     70
+
+60
+
+               50
+
+          40
+
+               30
+
+     20
+
+          10
+
+BST is not empty
+
+Inorder Traversal of BST:
+10 20 30 40 50 60 70
+
+Preorder Traversal of BST:
+60 20 10 40 30 50 70
+
+Postorder Traversal of BST:
+10 30 50 40 20 70 60
+
+The height is = 3
+
+Number of nodes is = 7
+
+Number of leaves is = 4
+
+
+Item to remove (-999 to stop): 40
+
+The height is = 3
+
+Number of nodes is = 6
+
+Number of leaves is = 3
+
+
+     70
+
+60
+
+          50
+
+               30
+
+     20
+
+          10
+
+BST is not empty
+
+Inorder Traversal of BST:
+10 20 30 50 60 70
+
+Preorder Traversal of BST:
+60 20 10 50 30 70
+
+Postorder Traversal of BST:
+10 30 50 20 70 60
+
+Item to remove (-999 to stop): 20
+
+The height is = 2
+
+Number of nodes is = 5
+
+Number of leaves is = 3
+
+
+     70
+
+60
+
+          50
+
+     30
+
+          10
+
+BST is not empty
+
+Inorder Traversal of BST:
+10 30 50 60 70
+
+Preorder Traversal of BST:
+60 30 10 50 70
+
+Postorder Traversal of BST:
+10 50 30 70 60
+
+Items to remove (-999 to stop): 60
+
+The height is = 2
+
+Number of nodes is = 4
+
+Number of leaves is = 2
+
+
+70
+
+          50
+
+     30
+
+          10
+
+BST is not empty
+
+Inorder Traversal of BST:
+10 30 50 70
+
+Preorder Traversal of BST:
+70 30 10 50
+
+Postorder Traversal of BST:
+10 50 30 70
+
+Items to remove (-999 to stop): 45
+
+-----error--------
+
+Did not find this item!
+
+The number not in the tree!
+
+The height is = 2
+
+Number of nodes is = 4
+
+Number of leaves is = 2
+
+
+70
+
+          50
+
+     30
+
+          10
+
+BST is not empty
+
+Inorder Traversal of BST:
+10 30 50 70
+
+Preorder Traversal of BST:
+70 30 10 50
+
+Postorder Traversal of BST:
+10 50 30 70
+
+Items to remove (-999 to stop): -999
+
+70
+
+          50
+
+     30
+
+          10
+
+BST is not empty
+
+Inorder Traversal of BST:
+10 30 50 70
+
+Preorder Traversal of BST:
+70 30 10 50
+
+Postorder Traversal of BST:
+10 50 30 70
+ert547@fox01:~/working$
