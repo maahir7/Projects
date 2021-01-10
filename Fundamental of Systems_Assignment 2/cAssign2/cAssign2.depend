@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1600716657 source:c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment\assignment2\cassign2\csum.c
+	<stdlib.h>
+	"cSum.h"
+
+1600365595 source:c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment\assignment2\cassign2\cswap.c
+	<stdlib.h>
+	"cSwap.h"
+
+1600363941 source:c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment\assignment2\cassign2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"cSwap.h"
+	"cSum.h"
+
+1600362961 c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment\assignment2\cassign2\cswap.c
+	<stdlib.h>
+
+1600368257 c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment\assignment2\cassign2\cswap.h
+
+1600368257 c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment\assignment2\cassign2\csum.h
+
+1600368257 source:c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment\assignment2\cassign2\cassign2.c
+	<stdio.h>
+	<stdlib.h>
+	"cSwap.h"
+	"cSum.h"
+

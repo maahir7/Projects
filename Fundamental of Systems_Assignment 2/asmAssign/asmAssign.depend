@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1600368244 source:c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment\assignment2\asmassign\asmmagicsum.c
+	<stdlib.h>
+	"asmMagicSum.h"
+
+1600368470 c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment\assignment2\asmassign\asmmagicsum.h
+
+1600370809 source:c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment\assignment2\asmassign\asmmagicswap.c
+	<stdlib.h>
+	"asmMagicSwap.h"
+
+1600368537 c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment\assignment2\asmassign\asmmagicswap.h
+
+1600370009 source:c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment\assignment2\asmassign\main.c
+	<stdio.h>
+	<stdlib.h>
+	"asmMagicSum.h"
+	"asmMagicSwap.h"
+
+1600370009 source:c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment\assignment2\asmassign\asmassign2.c
+	<stdio.h>
+	<stdlib.h>
+	"asmMagicSum.h"
+	"asmMagicSwap.h"
+
