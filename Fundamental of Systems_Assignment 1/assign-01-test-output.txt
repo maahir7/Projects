@@ -1,0 +1,14 @@
+Alice 	appears 1 time
+Another	appears 1 time
+Bob	appears 1 time
+Hello	appears 1 time
+Hello-world appears 1 time
+The	appears 1 time
+World	appears 1 time
+a 	appears 1 time
+first 	appears 1 time
+for 	appears 2 times
+is 	appears 2 times
+program appears 2 times
+
+The total number of words is 15; the number of different words is 12.

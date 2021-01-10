@@ -1,0 +1,13 @@
+the 1 
+first 1 
+program 2 
+for 2 
+alice 1 
+is 2 
+a 1 
+hello-world 1 
+ 1 
+another 1 
+bob 1 
+hello 1 
+world 1 
