@@ -1,0 +1,74 @@
+# depslib dependency file v1.0
+1599594295 source:c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment 1\word-count\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
+1599683791 source:c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment 1\word-count\wordcount.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"wordsProcessorLL.h"
+
+1599683497 c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment 1\word-count\wordsprocessorll.h
+
+1599683671 source:c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment 1\word-count\wordsprocessorll.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"wordsProcessorLL.h"
+
+1599866739 source:c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment\assignment 1\word-count\wordcount.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"wordsProcessorLL.h"
+
+1599683497 c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment\assignment 1\word-count\wordsprocessorll.h
+
+1599683671 source:c:\users\maahi\documents\utsa grad\fundamentals of systems\assignment\assignment 1\word-count\wordsprocessorll.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"wordsProcessorLL.h"
+
+1599863139 source:c:\users\maahi\documents\utsa_grad\fundamentals of systems\assignment\assignment 1\word-count\wordcount.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"wordsProcessorLL.h"
+
+1599679897 c:\users\maahi\documents\utsa_grad\fundamentals of systems\assignment\assignment 1\word-count\wordsprocessorll.h
+
+1599680071 source:c:\users\maahi\documents\utsa_grad\fundamentals of systems\assignment\assignment 1\word-count\wordsprocessorll.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"wordsProcessorLL.h"
+
+1599680071 source:c:\users\maahi\documents\utsa_grad\fundamentals of systems\assignment\assignment 3\word-count\wordsprocessorll.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"wordsProcessorLL.h"
+
+1599679897 c:\users\maahi\documents\utsa_grad\fundamentals of systems\assignment\assignment 3\word-count\wordsprocessorll.h
+
+1605324431 source:c:\users\maahi\documents\utsa_grad\fundamentals of systems\assignment\assignment 3\word-count\wordcount.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<sys/types.h>
+	<sys/wait.h>
+	<unistd.h>
+	"wordsProcessorLL.h"
+
