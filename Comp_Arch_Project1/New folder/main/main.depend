@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1602529320 source:c:\users\maahi\documents\utsa grad\computer architecture\projects\project1\new folder\main\main.c
+	<stdio.h>
+	<xmmintrin.h>
+	"dot_product.h"
+
+1602529291 c:\users\maahi\documents\utsa grad\computer architecture\projects\project1\new folder\main\dot_product.h
+
+1602526827 source:c:\users\maahi\documents\utsa grad\computer architecture\projects\project1\new folder\main\dot_product.c
+	<stdio.h>
+	"dot_product.h"
+	<stdlib.h>
+

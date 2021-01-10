@@ -1,0 +1,10 @@
+For Intrinstic functions:
+
+# this is for Intel Compiler, but GCC has ported these function within xmmintrin.h
+https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_load_ps
+
+# You can read xmmintrin.h for more information
+https://sites.uclouvain.be/SystInfo/usr/include/xmmintrin.h.html
+
+# SSE document
+http://tommesani.com/index.php/component/content/article/2-simd/35-sse-primer.html
