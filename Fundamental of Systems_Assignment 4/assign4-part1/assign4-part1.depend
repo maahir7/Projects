@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1606502381 source:c:\users\maahi\documents\utsa_grad\fundamentals of systems\assignment\assignment 4\assign4-part1\main.c
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<sys/stat.h>
+	<sys/mman.h>
+	<sys/types.h>
+	<fcntl.h>
+	<errno.h>
+
