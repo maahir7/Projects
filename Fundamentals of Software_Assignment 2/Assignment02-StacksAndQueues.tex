@@ -1,0 +1,165 @@
+\documentclass[12pt]{elsart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{program}
+\newcommand{\field}[1]{\mathbb{#1}}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Space to make more readable!
+%\vspace{10 mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Take out later!
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+\Large  CS3343 Analysis of Algorithms Fall 2020 \\
+\large {\bf Homework 2}\\
+\normalsize Due 9/30/20 before 11:59pm (Central Time)
+\end{center}
+
+{\bf 1. Evaluating Postfix Notation (20 points)}
+
+Sketch of algorithm for evaluating postfix strings:
+
+\begin{enumerate}
+   \item Create stack $s$.
+   \item For each token, $x$, in the postfix expression:
+\begin{enumerate}[label=\arabic*]
+   \item If $x$ is T or F push it into the stack $s$.
+   \item Else if $x$ is a unary operator
+\begin{enumerate}[label=\roman*]
+   \item pop an operand, $op1$, from $s$
+   \item compute $x$ $op1$ (see unary table below)
+   \item push the result into $s$
+\end{enumerate}
+   \item Else if $x$ is a binary operator
+\begin{enumerate}[label=\roman*]
+   \item pop an operand, $op2$, from $s$
+   \item pop an operand, $op1$, from $s$
+   \item compute $op1$ $op2$ $x$ 
+   \item push the result into $s$
+\end{enumerate}
+\end{enumerate}
+   \item If you do not have enough operands in $s$ to perform an operation you should return an error in the boolean.
+   \item Likewise, if $s$ contains more than one operand after all of the tokens are evaluated you should return an error in the boolean.
+   \item Otherwise pop and return the only value in $s$.
+\end{enumerate}
+
+
+\begin{center}
+  \begin{tabular}{ | p{3.5cm} | p{4cm} | p{4cm} | }
+    \hline
+    {\bf Operator Type} & {\bf Usage} & {\bf Calculation}  \\ \hline \hline
+    unary operator & $op1$ NOT &  $!op1$ \\ \hline
+    binary operator & $op1$ $op2$ AND &  $op1$ \&\& $op2$ \\ 
+    binary operator & $op1$ $op2$ NAND & $!(op1$ \&\& $op2)$ \\ 
+    binary operator & $op1$ $op2$ OR & $op1$ $\vert \vert$ $op2$ \\ 
+    binary operator & $op1$ $op2$ NOR & $!(op1$ $\vert \vert$ $op2)$ \\ 
+    binary operator & $op1$ $op2$ XOR & $op1$ $!=$ $op2$ \\ 
+    binary operator & $op1$ $op2$ COND & $!op1$ $\vert \vert$ $op2$ \\ 
+    binary operator & $op1$ $op2$ BICOND & $op1$ $==$ $op2$ \\ \hline
+  \end{tabular}
+\end{center}
+
+\newpage
+
+{\bf 2.  Probability (7 points)}
+
+For the following problem, clearly describe the sample space and the random variables you use.  Be sure to justify where you get your expected values from.
+
+Consider playing a game where you roll $n$ fair six-sided dice.  For every 1 or 6 you roll you win \$30, for rolling any other number you lose \$$3 n$ (where $n$ is the total number of dice rolled).
+
+\begin{enumerate}
+   \item  First assume $n=1$ (i.e., you only roll one six-sided die). 
+\begin{enumerate}
+   	\item  (1 point) Describe the sample space for this experiment.
+  	 \item (1 point) Describe a random variable which maps an outcome of this experiment to the winnings you receive.
+  	 \item (1 point)  Compute the expected value of this random variable.
+\end{enumerate}
+   \item  Now assume $n=7$ (i.e., you roll 7 six-sided dice). 
+\begin{enumerate}
+   	\item (1 point) Describe the sample space for this experiment (you don't need to list the elements but describe what is contained in it).
+   	\item (1 point) Describe a random variable which maps an outcome of this experiment to the winnings you receive. ({\bf Hint:} Express your random variable as the sum of seven random variables.)
+ 	  \item  (1 point) Compute the expected value of this random variable using the linearity of expectation.  Based on this would you play this game?
+\end{enumerate}
+   \item  (1 point) What is the largest value of $n$ for which you would still want to play the game?  Justify your answer.
+\end{enumerate}
+
+{\bf 3. Expected Runtime - Linear search (6 points)}
+
+The code below searches an unsorted array, $A$, for a given value.  It returns the index of the value if it is present.  Otherwise it returns $-1$.
+
+\begin{algorithm}
+\caption{int linearSearch(int $A[0\ldots n-1]$, int $val$)}
+ \begin{algorithmic}
+ \State $i = 0$;
+ \While{$i< n$}
+    \If{$val==A[i]$}
+       \State return $i$;
+    \EndIf
+    \State $i++$;
+  \EndWhile
+ \State return $-1$;
+\end{algorithmic}
+\end{algorithm}
+
+Suppose before we call linearSearch we randomly permute (i.e., reorder) the elements in $A$.  In the following problem, we will find the expected asymptotic runtime of linearSearch.
+
+\begin{enumerate}
+ \item (1 point) What is the best case asymptotic runtime of linearSearch on an array of $n$ elements?  What index must $val$ be located at to elicit this runtime?
+ \item (1 point) What is the worst case asymptotic runtime of linearSearch on an array of $n$ elements?  What index must $val$ be located at to elicit this runtime?
+ \item (1 point) For the sake of simplicity, assume $val$ is in $A$.  Let $X_j$ be the random variable which, given an permutation of the elements in our array, is $1$ if index $A[j]$ will be checked in our linearSearch for that permutation and $0$ otherwise.  What is the expected value of $X_j$?
+ \item (1 point) Let $X$ be the random variable which, given an permutation of the elements in our array,  is the number of elements of $A$ which will be checked in our linearSearch for that permutation.  Define $X$ using $n$ copies of the random variable defined in the previous step.
+ \item (2 points) Compute the expected value of $X$ for using the linearity of expectation. Given this, what is the expected asymptotic runtime of linearSearch?
+\end{enumerate}
+
+{\bf 4. Expected Runtime - OTPP (6 points)}
+
+Let's suppose you've been hired to help design a new game show called ``One True Programming Pair''.  The participants will compete to see which pair of programmers are the best at cooperative coding.
+
+Your job is to take an array of programmers and find a set of candidate pairs that will compete in the game show.  Inspired by the hireAssistant algorithm you develop the following algorithm.  It adds a pair to the candidate list if the pair is better than the best pair seen so far.  
+
+\begin{algorithm}
+\caption{void findCandidatePairs( person $A[1\ldots n]$ )}
+ \begin{algorithmic}[1]
+ \State $best = -1$;   //This will contain core of the best pair seen so far
+ \State $i = 1$;
+ \While{$i\leq n-1$}
+    \State $j = i+1$;
+    \While{$j \leq n$}
+       \State //Check if pair i,j is better than best pair seen so far
+       \If{$best < evalPair(A[i],A[j])$}
+          \State $best = evalPair(A[i],A[j])$;
+          \State Add the pair $i,j$ to to list of candidate pairs 
+          \State //Note: a person is permitted to be in multiple candidate pairs
+       \EndIf
+       \State $j++$;
+    \EndWhile
+    \State $i++$;
+  \EndWhile
+\end{algorithmic}
+\end{algorithm}
+
+\begin{enumerate}
+ \item (1 point) What is the smallest number of times that line 9 will run for findCandidatePairs on an array $A$ of $n$ people?  
+ \item (1 point) What is the largest number of times that line 9 will run for findCandidatePairs on an array $A$ of $n$ people?   
+ \item (1 point) Define the random variable $X_{ij}$ as follows:
+\[
+ X_{ij}(A)= \begin{cases} 
+      1 & \text{For array $A$ the pair $i$ and $j$ are added to the candidate list} \\
+      0 & \text{Otherwise}
+   \end{cases}
+   \]
+ Let's assume the probability that $X_{ij}=1$ is $\frac{1}{ij}$. Compute $E(X_{ij})$.
+ \item (1 point) Let $X$ be the random variable which, given our array $A$, which is the number of pairs added to our list of candidates.  Define $X$ using a nested sum of the random variable $X_{ij}$.
+ \item (2 points) Compute $E(X)$.\\
+{\bf Hint:} $\sum\limits_{x=s_1}^{f_1}\sum\limits_{y=s_2}^{f_2}A_xB_y=\left(\sum\limits_{x=s_1}^{f_1} A_x\right)*\left(\sum\limits_{y=s_2}^{f_2}B_y\right)$ where $s_1\leq f_1$, $s_2 \leq f_2$, and they are all integers.  $A_x$ is a function on $x$ and is not related to $y$.  Likewise $B_y$ is a function on $y$ and is not related to $x$.  
+\end{enumerate}
+
+\end{document}

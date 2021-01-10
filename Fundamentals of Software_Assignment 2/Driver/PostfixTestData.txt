@@ -1,0 +1,74 @@
+false
+true NOT
+true
+false NOT
+true
+true true AND
+false
+true false AND
+false
+false true AND
+false
+false false AND
+false
+true true NAND
+true
+true false NAND
+true
+false true NAND
+true
+false false NAND
+true
+true true OR
+true
+true false OR
+true
+false true OR
+false
+false false OR
+false
+true true XOR
+true
+true false XOR
+true
+false true XOR
+false
+false false XOR
+false
+true true NOR
+false
+true false NOR
+false
+false true NOR
+true
+false false NOR
+true
+true true COND
+false
+true false COND
+true
+false true COND
+true
+false false COND
+true
+true true BICOND
+false
+true false BICOND
+false
+false true BICOND
+true
+false false BICOND
+error
+true true
+true
+true false AND true OR
+false
+true false AND true OR NOT
+error
+true false AND OR
+error
+true false true true AND OR
+true
+true false NOR true false NAND XOR
+false
+true false NOR true false NAND XOR true false AND true OR NOT BICOND
